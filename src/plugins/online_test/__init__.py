@@ -15,7 +15,7 @@ __plugin_meta__ = PluginMetadata(
 )
 
 
-online_test = on_command("在线测试", aliases={"测试在线"})
+online_test = on_command("在线测试", aliases={"测试在线"}, block=True)
 
 
 @online_test.handle()
@@ -24,7 +24,7 @@ async def handle_online_test():
 
 
 # 创建一个命令触发器
-system_info = on_command("系统信息", aliases={"获取系统信息", "系统状态"})
+system_info = on_command("系统信息", aliases={"获取系统信息", "系统状态"}, block=True)
 
 
 @system_info.handle()
@@ -43,12 +43,13 @@ async def handle_system_info():
 
     # 格式化回复内容
     response = (
-        f"\n"
+        f"\n要……看看我的内在么……"
         f"系统名称: {system_name}\n"
         f"系统版本: {system_version}\n"
         f"CPU: {cpu}\n"
         f"CPU使用率: {cpu_usage}%\n"
-        f"内存使用量: {memory_used:.2f} GB / {memory_total:.2f} GB ({memory_percentage}%)"
+        f"内存使用量: {
+            memory_used:.2f} GB / {memory_total:.2f} GB ({memory_percentage}%)"
     )
 
     # 发送系统信息
