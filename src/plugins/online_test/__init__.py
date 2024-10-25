@@ -43,7 +43,7 @@ async def handle_system_info():
 
     # 格式化回复内容
     response = (
-        f"\n要……看看我的内在么……"
+        f" 要……看看我的内在么……\n"
         f"系统名称: {system_name}\n"
         f"系统版本: {system_version}\n"
         f"CPU: {cpu}\n"
